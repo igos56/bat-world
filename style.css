@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: rgb(233, 210, 152);
+    --text-color: rgb(245, 180, 40);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
+}
+
+.card {
+    width: 300px;
+    height: 380px;
+    padding: 16px;
+    background-color: rgb(193, 188, 188);
+    cursor: pointer;
+    background: url(./img/bg-bat.jpg) center no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    color: transparent;
+    outline: 1px solid transparent;
+    outline-offset: -8px;
+    box-shadow: 0 50px 40px -50px #000;
+    transition: all 1s ease-in, color 1.5s 1.3s, outline 1.6s 1s;
+}
+
+.card:hover {
+    color: inherit;
+    outline: 1px solid var(--text-color);
+}
+
+.card:hover.card-1 {
+    background: url(./img/batman.jpg) center no-repeat;
+    background-size: 100%;
+}
+
+.card:hover.card-2 {
+    background: url(./img/joker.jpg) center no-repeat;
+    background-size: 200%;
+}
+
+.card:hover.card-3 {
+    background: url(./img/robin.jpg) center no-repeat;
+    background-size: 100%;
+}
+
+.card-1:hover {
+    animation-name: cardin-1;
+    animation-duration: 1.2s;
+}
+@keyframes cardin-1 {
+    0% {
+        background: url(./img/bg-bat.jpg) center no-repeat;
+        background-size: 100%;
+    }
+    50% {
+        background-size: 400%;
+        
+    }
+    100% {
+        background-size: 100%;
+        background-image: url(./img/batman.jpg);
+    }
+}
+
+.card-2:hover {
+    animation-name: cardin-2;
+    animation-duration: 1.2s;
+}
+@keyframes cardin-2 {
+    0% {
+        background: url(./img/bg-bat.jpg) center no-repeat;
+        background-size: 100%;
+    }
+    50% {
+        background-size: 400%;
+        
+    }
+    100% {
+        background-size: 200%;
+        background-image: url(./img/joker.jpg);
+    }
+}
+
+.card-3:hover {
+    animation-name: cardin-3;
+    animation-duration: 1.2s;
+}
+@keyframes cardin-3 {
+    0% {
+        background: url(./img/bg-bat.jpg) center no-repeat;
+        background-size: 100%;
+    }
+    50% {
+        background-size: 300%;
+    }
+    100% {
+        background-image: url(./img/robin.jpg);
+        background-size: 100%;
+    }
+}
